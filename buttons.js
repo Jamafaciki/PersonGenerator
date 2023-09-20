@@ -1,5 +1,3 @@
-
-
 document.getElementById('more').addEventListener('click', function () {
     const initPerson = personGenerator.getPerson();
     document.getElementById('surnameOutput').innerText = initPerson.surName;
