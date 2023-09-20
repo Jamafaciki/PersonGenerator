@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(161, 230, 230);
+}
+.card-header{
+    background-color: rgb(219, 198, 252);
+    font-weight:bold;
+}
+.card{
+    width: 350px;
+    margin-top: 50%;
+    margin-left: 120px;
+    background-color: rgb(206 214 239);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h5{
+    margin-bottom: 20px;
+}
+
+#more{
+    width: 91px;
+}
