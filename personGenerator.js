@@ -101,9 +101,9 @@ const personGenerator = {
     
     randomMiddlename: function() {
         if(this.GENDER == 'Мужчина'){
-            return this.randomValue(middleNames.middleNameJson) + "ич";
+            return this.randomValue(this.firstNameMaleJson) + "ович";
         } else {
-            return this.randomValue(middleNames.middleNameJson) + "на";
+            return this.randomValue(this.firstNameMaleJson) + "овна";
         }  
     },
     generateDB: function(){
@@ -152,26 +152,26 @@ const personGenerator = {
     },
 };
 
-const middleNames = {
-    middleNameJson: `{
-            "count": 13,
-            "list": {     
-                "id_1": "Александров",
-                "id_2": "Максимов",
-                "id_3": "Иванов",
-                "id_4": "Артемов",
-                "id_5": "Дмитриев",
-                "id_6": "Андреев",
-                "id_7": "Михаилов",
-                "id_8": "Даниилов",
-                "id_9": "Егоров",
-                "id_10": "Алексеев",
-                "id_11": "Юрьев",
-                "id_12": "Васильев",
-                "id_13": "Владимиров"
-                    }
-                }`
-}
+//const middleNames = {
+//    middleNameJson: `{
+//            "count": 13,
+//            "list": {     
+//                "id_1": "Александров",
+//                "id_2": "Максимов",
+//                "id_3": "Иванов",
+//                "id_4": "Артемов",
+//                "id_5": "Дмитриев",
+//                "id_6": "Андреев",
+//                "id_7": "Михаилов",
+//                "id_8": "Даниилов",
+//                "id_9": "Егоров",
+//                "id_10": "Алексеев",
+//                "id_11": "Юрьев",
+//                "id_12": "Васильев",
+//                "id_13": "Владимиров"
+//                    }
+//                }`
+//}
 
 const works = {
     workMan: `{
