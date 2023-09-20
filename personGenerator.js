@@ -100,11 +100,37 @@ const personGenerator = {
     },
     
     randomMiddlename: function() {
+        let middlename = this.randomValue(this.firstNameMaleJson);
+        var splitted = middlename.split("");
+        let lengname = splitted.length - 1;
+        //Проверка сделана исходя из заранее известных мужских имён. Если имён было бы больше - то и проверка была бы из ещё больше if портянки.
         if(this.GENDER == 'Мужчина'){
-            return this.randomValue(this.firstNameMaleJson) + "ович";
+            if(middlename == "Михаил"){
+                splitted.splice(lengname - 1, 2);
+                return (splitted.join("") + "йлович");
+                } else if (splitted[lengname] == "й"){
+                    splitted.splice(lengname, 1);
+                    return (splitted.join("") + "евич");
+                    } else if ((splitted[lengname -1] + splitted[lengname]) == "та") {
+                        splitted.splice(lengname, 1);
+                        return (splitted.join("") + "ич");
+                        } else {
+                            return  (middlename + "ович");
+                            }
         } else {
-            return this.randomValue(this.firstNameMaleJson) + "овна";
-        }  
+            if(middlename == "Михаил"){
+                splitted.splice(lengname - 1, 2);
+                return (splitted.join("") + "йловна");
+                } else if (splitted[lengname] == "й"){
+                    splitted.splice(lengname, 1);
+                    return (splitted.join("") + "евна");
+                    } else if ((splitted[lengname -1] + splitted[lengname]) == "та") {
+                        splitted.splice(lengname, 1);
+                        return (splitted.join("") + "ична");
+                        } else {
+                            return  (middlename + "овна");
+                            }
+            }
     },
     generateDB: function(){
        var Year = this.randomIntNumber(2005 , 1970);
